@@ -1,0 +1,18 @@
+<div class="row justify-content-center align-item-center">
+  <div class="col-6">
+    <%= simple_form_for(pet) do |f| %>
+      <%= f.input :name, label: 'Type the pet name' %>
+
+      <%= f.input :address, placeholder: '1 Pet Road' %>
+
+      <%= f.input :found_on %>
+
+      <% if pet.id %>
+        <%= f.button :submit, 'Update' , class: 'btn btn-primary' %>
+      <% else %>
+        <%= f.button :submit, 'Create' , class: 'btn btn-primary' %>
+      <% end %>
+    <% end %> 
+  </div>
+</div>
+
